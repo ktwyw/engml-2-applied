@@ -1,0 +1,81 @@
+# Jupyter Book 2 (mystmd) configuration
+version: 1
+project:
+  title: "Machine learning and physics-informed modelling for chemical and materials engineers. Volume II: Applied and physics-constrained modelling"
+  description: Conservation laws as exact constraints, data reconciliation, monotone and robust regression, chemometrics, clustering, tree ensembles and conformal prediction intervals for chemical and materials engineers, in executed notebooks with every method written out in NumPy and checked against an exact result.
+  keywords: [chemical engineering, process data, machine learning, data reconciliation, chemometrics, partial least squares, isotonic regression, conformal prediction, engineering education]
+  authors:
+    - name: Yanwei Wang
+      orcid: 0000-0002-8488-9833
+      affiliations:
+        - School of Engineering, Nazarbayev University
+  github: https://github.com/ktwyw/engml-2-applied
+  license:
+    content: CC-BY-4.0
+    code: MIT
+  exclude:
+    - README.md
+    - DATA_LICENSE.md
+    - CHANGELOG.md
+    - CONTRIBUTING.md
+    - _build/**
+  toc:
+    - file: docs/intro.md
+    - title: "Part I. Conservation as a constraint"
+      children:
+        - file: notebooks/part1_conservation/00_elemental_mass_and_charge_conservation_matrices.ipynb
+        - file: notebooks/part1_conservation/01_kkt_equality_constrained_regression.ipynb
+        - file: notebooks/part1_conservation/02_process_data_reconciliation_and_gross_error_detection.ipynb
+    - title: "Part II. Monotone, convex and robust fits"
+      children:
+        - file: notebooks/part2_shape/03_thermodynamic_stability_and_pava_isotonic_regression.ipynb
+        - file: notebooks/part2_shape/04_monotone_splines_and_convex_free_energy_potentials.ipynb
+        - file: notebooks/part2_shape/05_outlier_robust_regression_huber_irls_and_quantile_loss.ipynb
+    - title: "Part III. Chemometrics and process monitoring"
+      children:
+        - file: notebooks/part3_chemometrics/06_beer_lambert_spectroscopy_and_spectral_preprocessing.ipynb
+        - file: notebooks/part3_chemometrics/07_svd_principal_component_analysis_and_pcr.ipynb
+        - file: notebooks/part3_chemometrics/08_partial_least_squares_nipals_for_soft_sensors.ipynb
+        - file: notebooks/part3_chemometrics/09_multivariate_process_monitoring_hotelling_t2_and_q.ipynb
+    - title: "Part IV. Clustering and phases"
+      children:
+        - file: notebooks/part4_clustering/10_unsupervised_phase_clustering_kmeans_and_voronoi.ipynb
+        - file: notebooks/part4_clustering/11_normalized_laplacian_spectral_clustering_manifolds.ipynb
+        - file: notebooks/part4_clustering/12_gaussian_mixture_models_and_gibbs_phase_rule.ipynb
+    - title: "Part V. Trees and ensembles"
+      children:
+        - file: notebooks/part5_ensembles/13_decision_trees_cart_and_prefix_sum_splitting.ipynb
+        - file: notebooks/part5_ensembles/14_random_forests_bagging_and_feature_importance.ipynb
+        - file: notebooks/part5_ensembles/15_functional_gradient_boosting_and_huber_clipping.ipynb
+    - title: "Part VI. Prediction intervals and a capstone"
+      children:
+        - file: notebooks/part6_guardrails/16_split_conformal_prediction_and_mahalanobis_ood.ipynb
+        - file: notebooks/part6_guardrails/17_capstone_industrial_soft_sensor_and_reconciliation.ipynb
+    - title: "Solutions to the exercises"
+      children:
+        - file: solutions/part1_conservation/00_solutions.ipynb
+        - file: solutions/part1_conservation/01_solutions.ipynb
+        - file: solutions/part1_conservation/02_solutions.ipynb
+        - file: solutions/part2_shape/03_solutions.ipynb
+        - file: solutions/part2_shape/04_solutions.ipynb
+        - file: solutions/part2_shape/05_solutions.ipynb
+        - file: solutions/part3_chemometrics/06_solutions.ipynb
+        - file: solutions/part3_chemometrics/07_solutions.ipynb
+        - file: solutions/part3_chemometrics/08_solutions.ipynb
+        - file: solutions/part3_chemometrics/09_solutions.ipynb
+        - file: solutions/part4_clustering/10_solutions.ipynb
+        - file: solutions/part4_clustering/11_solutions.ipynb
+        - file: solutions/part4_clustering/12_solutions.ipynb
+        - file: solutions/part5_ensembles/13_solutions.ipynb
+        - file: solutions/part5_ensembles/14_solutions.ipynb
+        - file: solutions/part5_ensembles/15_solutions.ipynb
+        - file: solutions/part6_guardrails/16_solutions.ipynb
+        - file: solutions/part6_guardrails/17_solutions.ipynb
+    - file: docs/syllabus.md
+    - file: docs/notation.md
+    - file: docs/validation.md
+    - file: docs/references.md
+site:
+  template: book-theme
+  options:
+    logo_text: "EngML II: Applied modelling"

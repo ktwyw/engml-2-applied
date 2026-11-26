@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "engml-2-applied"
+version = "1.0.0"
+description = "Constrained least squares, data reconciliation, monotone and robust regression, chemometrics, clustering, tree ensembles and conformal intervals for chemical and materials engineers: a small NumPy package, companion to the engml-2-applied book of executed notebooks."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Yanwei Wang", email = "yanwei.wang@nu.edu.kz" }]
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24"]
+keywords = ["chemical engineering", "process data", "data reconciliation", "isotonic regression", "chemometrics", "partial least squares", "clustering", "random forest", "conformal prediction", "education"]
+
+[project.urls]
+Homepage = "https://ktwyw.github.io/engml-2-applied/"
+Repository = "https://github.com/ktwyw/engml-2-applied"
+
+[project.optional-dependencies]
+book = ["matplotlib>=3.7", "jupyterlab", "nbformat>=5.9", "nbclient>=0.9", "ipykernel"]
+test = ["pytest", "matplotlib>=3.7"]
+
+[tool.setuptools]
+packages = ["engml_2_applied"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
